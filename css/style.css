@@ -1,367 +1,375 @@
 /* ===== RESET ===== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ===== BODY ===== */
+/* ===== BODY & ESTRUTURA ===== */
+html,
 body {
-    background: #f2f2f2;
-    font-family: "Courier New", monospace;
+  width: 100%;
+  height: 100%;
+  background: #0f0f0f;
+  font-family: "Courier New", monospace;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* ===== CABEÇALHO ===== */
 .cabecalho {
-    background: linear-gradient(0deg, rgba(255, 98, 0, 1) 4%, rgba(235, 159, 66, 1) 100%);
-    color: #fff;
-    padding: 20px;
+  background: linear-gradient(0deg,rgba(255, 98, 0, 1) 4%,rgba(235, 159, 66, 1) 100%);
+  color: #fff;
+  padding: 20px 0;
 }
 
 /* ===== TOPO ===== */
 .topo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* ===== LOGO ===== */
 .logo {
-    height: 100px;
+  height: auto;
+  max-height: 100px; /* peguei o maior valor */
+}
+
+.imagemSobre {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #ff6200;
 }
 
 /* ===== BARRA DE PESQUISA ===== */
 .barraPesquisa {
-    position: absolute;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.barraPesquisa input {
-    padding: 5px;
+  position: absolute;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .barraPesquisa button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  transition: 0.3s;
 }
 
-/* ===== MENU ===== */
-.menu {
-    margin-top: 10px;
-}
-
-/* ===== LISTA MENU ===== */
-.lista {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.lista li {
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.lista li:hover {
-    color: orange;
-}
-
-/* ===== LINKS ===== */
-a {
-    color: inherit;
-    text-decoration: none;
+.barraPesquisa button:hover {
+  color: #000;
 }
 
 /* ===== INPUT PESQUISA ===== */
 .pesquisa {
-    padding: 10px 16px;
-    border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    background: rgba(255, 255, 255, 0.18);
-    color: #fff;
-    width: 240px;
-    font-size: 16px;
-    transition: 0.3s;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  width: 240px;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
 .pesquisa::placeholder {
-    color: rgba(255, 255, 255, 0.75);
-    font-family: "Courier New", monospace;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .pesquisa:focus {
-    outline: none;
-    box-shadow: 0 0 12px rgba(255, 140, 0, 0.6);
-    border-color: rgba(255, 255, 255, 0.95);
-    background: rgba(255, 255, 255, 0.25);
+  outline: none;
+  box-shadow: 0 0 12px rgba(255, 140, 0, 0.6);
+  border-color: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.25);
 }
 
-/* ===== ÍCONE CARRINHO ===== */
-#carinho {
-    color: white;
-    transition: color 0.3s;
+/* ===== MENU ===== */
+.menu {
+  margin-top: 15px;
 }
 
-#carinho:hover {
-    color: orange;
+.lista {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.lista li {
+  transition: 0.3s;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.lista li:hover {
+  color: #000;
+}
+
+/* ===== LINKS ===== */
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 /* ===== BANNER ===== */
 .banner {
-    background: url('/img/Banner.png') no-repeat center center;
-    background-size: cover;
-    height: 500px;
-    position: relative;
+  background: url("../img/Banner.png") no-repeat center center;
+  background-size: cover;
+  height: 65vh;
+  min-height: 400px;
+  position: relative;
 }
 
-/* ===== BOTÃO BANNER ===== */
 .btnBanner {
-    position: absolute;
-    top: 388px;
-    left: 230px;
-    padding: 15px 30px;
-    width: 255px;
-    height: 85px;
-    background-color: orange;
-    color: white;
-    border: 5px solid rgb(80, 56, 12);
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: 0.3s;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  padding: 15px 25px;
+  background-color: orange;
+  color: white;
+  border: 5px solid rgb(80, 56, 12);
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .btnBanner:hover {
-    background-color: rgb(255, 183, 66);
+  background-color: rgb(255, 183, 66);
 }
 
-/* ===== SEÇÕES GERAIS ===== */
+/* ===== SEÇÕES ===== */
 .sobre,
 .experiencia,
-.destaques {
-    padding: 60px 20px;
-    text-align: center;
-    color: #fff;
+.destaques,
+.conteudoPlanos {
+  padding: 80px 20px;
+  text-align: center;
+  color: #fff;
 }
 
 /* ===== SOBRE ===== */
 .sobre {
-    background: #1a1a1a;
+  background: #1a1a1a;
 }
 
 .sobre h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #ff7a00;
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ff7a00;
 }
 
 .sobre p {
-    max-width: 700px;
-    margin: 10px auto;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #ccc;
+  max-width: 800px;
+  margin: 10px auto;
+  color: #ccc;
+  line-height: 1.6;
 }
 
 /* ===== EXPERIÊNCIA ===== */
 .experiencia {
-    background: #111;
+  background: #111;
 }
 
 .experiencia h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: #ff4500;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #ff4500;
 }
 
 .experiencia p {
-    max-width: 700px;
-    margin: 10px auto;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #bbb;
+  max-width: 800px;
+  margin: 10px auto;
+  color: #bbb;
+  line-height: 1.6;
 }
 
 /* ===== DESTAQUES ===== */
 .destaques {
-    background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
-    width: 100%;
-    height: 520px;
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+  width: 100%;
 }
 
-.destaques h2 {
-    font-size: 30px;
-    margin-bottom: 40px;
-    color: #ff7a00;
-}
-
-/* ===== CARDS ===== */
 .cards {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 30px auto 0;
 }
 
+/* ===== CARD (UNIFICADO) ===== */
 .card {
-    background: #1f1f1f;
-    padding: 30px 20px;
-    width: 250px;
-    border-radius: 12px;
-    transition: 0.3s;
-    box-shadow: 0 0 10px rgba(255, 100, 0, 0.2);
+  background: #1f1f1f;
+  padding: 25px;
+  width: 280px;
+  border-radius: 12px;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
+  border: 1px solid #333;
 }
+
 
 .card i {
-    font-size: 40px;
-    color: #ff6a00;
-    margin-bottom: 15px;
+  font-size: 40px;
+  color: #ff6a00;
+  margin-bottom: 15px;
 }
 
-.card h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #fff;
+/* ===== CARDÁPIO (DO SEGUNDO CSS) ===== */
+.cardapio {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.card p {
-    font-size: 14px;
-    color: #bbb;
+/* ===== IMAGEM CARD ===== */
+.imagemCard {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #ff6200;
+  margin-bottom: 15px;
 }
 
-/* ===== IMAGEM SOBRE ===== */
-.imagemSobre {
-    margin-top: 30px;
-    width: 100%;
-    max-width: 600px;
-    border-radius: 12px;
-    border: 5px solid white;
+/* ===== TEXTO CARD ===== */
+.card h2 {
+  color: #ff7a00;
+  margin-bottom: 10px;
 }
 
-/* ===== FOOTER ===== */
-.footer {
-    background: linear-gradient(90deg, #1a1a1a, #2b0a0a);
-    color: #ccc;
-    text-align: center;
-    padding: 15px 10px;
-    font-size: 14px;
-    border-top: 2px solid #ff4500;
+.desc {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 15px;
 }
 
-.footer-bottom p {
-    margin: 0;
-    letter-spacing: 1px;
+.preco {
+  font-weight: bold;
+  color: #ff4500;
 }
 
-.footer:hover {
-    background: linear-gradient(90deg, #2b0a0a, #1a1a1a);
-    transition: 0.3s ease;
+/* ===== BOTÃO CARD ===== */
+.btnComprar {
+  width: 100%;
+  padding: 12px;
+  background: #ff6200;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.btnComprar:hover {
+  background: #ff8c00;
+}
+
+/* ===== TABELA ===== */
+.conteudoPlanos {
+  flex: 1;
+}
+
+
+
+.tabelaPlanos {
+  margin: 40px auto;
+  border-collapse: collapse;
+  width: 90%;
+  max-width: 900px;
+  background: #1f1f1f;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tabelaPlanos th {
+  background: #ff6200;
+  color: white;
+  padding: 20px;
+}
+
+.tabelaPlanos td {
+  padding: 18px;
+  border-bottom: 1px solid #333;
+  color: #eee;
+}
+
+.tabelaPlanos tr:hover {
+  background: #2a2a2a;
 }
 
 /* ===== CONTATO ===== */
 .contato {
-    padding: 60px 20px;
-    text-align: center;
-    background: #111;
-    color: #fff;
+  padding: 60px 20px;
+  background: #111;
+  color: #fff;
+  text-align: center;
 }
 
-.contato h1 {
-    font-size: 32px;
-    color: #ff7a00;
-    margin-bottom: 10px;
-}
-
-.sub {
-    color: #bbb;
-    margin-bottom: 30px;
-}
-
-/* ===== FORMULÁRIO ===== */
 .formContato {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 400px;
-    margin: 0 auto 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 450px;
+  margin: 0 auto 30px;
 }
 
 .formContato input,
-.formContato textarea {
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #333;
-    background: #1f1f1f;
-    color: white;
-    font-family: "Courier New", monospace;
+.formContato textarea,
+.formContato select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #1f1f1f;
+  color: white;
 }
 
-.formContato textarea {
-    resize: none;
-    height: 120px;
-}
 
-.formContato input:focus,
-.formContato textarea:focus {
-    outline: none;
-    border-color: #ff6200;
-    box-shadow: 0 0 10px rgba(255, 98, 0, 0.4);
-}
-
-/* ===== BOTÃO FORM ===== */
 .formContato button {
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background: #ff6200;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s;
-    font-weight: bold;
+  padding: 15px;
+  border-radius: 8px;
+  background: #ff6200;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 .formContato button:hover {
-    background: #ff8c00;
+  background: #ff8c00;
 }
 
-/* ===== INFO CONTATO ===== */
-.infoContato {
-    color: #ccc;
-    line-height: 1.6;
-}
-
-
-
-/* ===== TABELA PLANOS ===== */
-.tabelaPlanos {
-    margin: 30px auto;
-    border-collapse: collapse;
-    width: 80%;
-    max-width: 700px;
-    background: #1f1f1f;
-    border-radius: 10px;
-    overflow: hidden;
-    color: white;
-}
-
-/* ===== TABELA CABEÇALHO ===== */
-.tabelaPlanos th {
-    background: #ff6200;
-    padding: 15px;
-    font-size: 16px;
-}
-
-/* ===== TABELA LINHAS ===== */
-.tabelaPlanos td {
-    padding: 12px;
-    border-bottom: 1px solid #333;
-    color: #ccc;
+/* ===== FOOTER ===== */
+.footer {
+  background: linear-gradient(90deg, #1a1a1a, #2b0a0a);
+  color: #ccc;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 14px;
+  border-top: 2px solid #ff4500;
+  margin-top: auto;
 }

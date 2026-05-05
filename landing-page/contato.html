@@ -39,24 +39,27 @@
         <p class="sub">Alguma dúvida ou pedido especial? Envie uma mensagem </p>
 
         <form class="formContato">
-            <input type="text" placeholder="Seu nome" required>
-            <input type="email" placeholder="Seu email" required>
-            <input type="tel" placeholder="Seu telefone" required>
-                <select>
-                    <option value="">Selecione</option>
-                    <option value="duvida">Dúvida</option>
-                    <option value="pedido">Pedido</option>
-                    <option value="suporte">Suporte</option>
-                </select>
-            <textarea placeholder="Digite sua mensagem..." required></textarea>
-            <button type="submit">Enviar Mensagem</button>
-        </form>
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu email" required>
+            <input type="tel" name="telefone" placeholder="Seu telefone" required>
 
-        <div class="infoContato">
-            <p><strong>📍 Endereço:</strong> Rua do Subsolo, 123</p>
-            <p><strong>📞 Telefone:</strong> (11) 9999-9999</p>
-            <p><strong>📧 Email:</strong> contato@grillbys.com</p>
-        </div>
+            <select name="assunto" id="assunto" required>
+                <option value="" disabled selected>Selecione o assunto</option>
+                <option value="duvida">Dúvida</option>
+                <option value="pedido">Pedido</option>
+                <option value="suporte">Suporte</option>
+            </select>
+
+            <textarea name="mensagem" placeholder="Digite sua mensagem..." required></textarea>
+
+            <button type="submit">Enviar Mensagem</button>
+            </form>
+
+            <div class="infoContato">
+                <p><strong>📍 Endereço:</strong> Rua do Subsolo, 123</p>
+                <p><strong>📞 Telefone:</strong> (11) 9999-9999</p>
+                <p><strong>📧 Email:</strong> contato@grillbys.com</p>
+            </div>
     </section>
 
     <!-- FOOTER -->
